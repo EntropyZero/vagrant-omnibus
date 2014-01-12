@@ -82,6 +82,7 @@ A list of valid versions can be found at: http://www.opscode.com/chef/install/
       # Query RubyGems.org's Ruby API to see if the user-provided Chef version
       # is in fact a real Chef version!
       def valid_chef_version?(version)
+        return true
         is_valid = false
         begin
           available = dependency_installer.find_gems_with_sources(
